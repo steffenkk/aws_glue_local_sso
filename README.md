@@ -1,6 +1,6 @@
 # Glue in Docker for sso access 
 
-TLDR: clone this & run 
+TLDR: download the makefile & run 
 
 ```console
 aws sso login
@@ -12,7 +12,7 @@ make start
 ## Execution:
 1. Pull the container with ```docker pull steffenkk/glue_local_sso:latest```
 2. Run the container with ```docker run -p 8888:8888 -p 4040:4040 -v ~/.aws:/root/.aws:rw -v $(pwd)/glue:/home/jupyter/jupyter_default_dir  -e AWS_PROFILE=$AWS_DEFAULT_PROFILE steffenkk/glue_local_sso ```
-    (Prerequisites: a local ```./glue``` repo containes the ipynb files & the env ```AWS_DEFAULT_PROFILE``` points to the profile you want to use or rename these)
+    (Prerequisites: a local ```./glue``` repo contains the ipynb files & the env ```AWS_DEFAULT_PROFILE``` points to the profile you want to use; or just rename these)
 
 ## Development:
 1. Build the container with an existing requirements.txt & a start.sh file
