@@ -1,0 +1,4 @@
+boto3
+urllib3
+aws-sso-credential-process
+requests
